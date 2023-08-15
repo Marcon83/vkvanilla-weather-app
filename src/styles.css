@@ -65,5 +65,17 @@ li first-letter{
     top: -24px;
 }
 
+.weather.temperature.active {
+  color: green;
+  cursor: default;
+}
+
+.weather.temperature.active:hover {
+  text-decoration: none;
+}
+
+
+
+
 
 

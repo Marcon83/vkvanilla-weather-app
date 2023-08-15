@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
@@ -28,6 +29,7 @@
           class="form-control"
           id="city-input"
           autocomplete="off"
+          autofocus="on"
           />
           </div>
           <div class="col-3">
@@ -43,7 +45,7 @@
            <h1 id="city"></h1>
            <ul>
            <li>Last Updated: <span id="date"></span></li>
-           <li id="description">Clear</li>
+           <li id="description"></li>
            </ul>
           </div>
           <div class="row">
@@ -56,13 +58,14 @@
                />
                <div class="weather-icon">
                 <strong id="temperature"></strong
-                  ><span class="units">°C | <a href="#">°F</a></span>
+                  ><span class="units"><a href="#" id="celsius-link" class="active">°C</a> | 
+                    <a href="#" id="fahrenheit-link">°F</a></span>
                </div>
            </div>
           </div>
           <div class="col-6">
              <ul>
-              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind: <span id="wind"></span> km/h</li>
              </ul>
            </div>
