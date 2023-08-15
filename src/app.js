@@ -53,7 +53,7 @@ function showTemperature(response) {
 }
 function search(city) {
   let apiKey = "e239a883216ce124d5dcb87c4ed8d51a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New%20York&appid=e239a883216ce124d5dcb87c4ed8d51a&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 
@@ -91,4 +91,4 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-search("New York");
+search("Monrovia");
